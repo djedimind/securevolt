@@ -1,95 +1,294 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Securevolt Solutions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Securevolt Solutions - Security, IT, Network, and Protection. Fast response. Professional installs." />
   <style>
-    body {
-      margin: 0;
+    :root{
+      --bg:#0a0f1c;
+      --card:#121a2f;
+      --card2:#0f172a;
+      --text:#ffffff;
+      --muted:rgba(255,255,255,.78);
+      --accent:#00bcd4;
+      --accent2:#22c55e;
+      --danger:#ef4444;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background-color: #0a0f1c;
-      color: white;
-      text-align: center;
+      background: radial-gradient(1200px 800px at 20% 0%, #12203a, var(--bg));
+      color:var(--text);
     }
-
-    header {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:0 18px}
+    header{
+      padding:56px 0 24px;
+      background: linear-gradient(135deg, rgba(0,188,212,.18), rgba(34,197,94,.10), rgba(44,83,100,.15));
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
-
-    h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
+    .top{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
     }
-
-    p {
-      font-size: 18px;
-      opacity: 0.9;
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
     }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background-color: #00bcd4;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
+    .logo{
+      width:44px;height:44px;border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), #2c5364);
+      box-shadow: var(--shadow);
     }
-
-    .services {
-      padding: 50px 20px;
+    h1{margin:0;font-size:34px;letter-spacing:.2px}
+    .tag{margin:8px 0 0;color:var(--muted);font-size:16px;line-height:1.4}
+    .hero{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
     }
-
-    .service-box {
-      margin: 20px auto;
-      max-width: 320px;
-      padding: 20px;
-      background-color: #1a2238;
-      border-radius: 8px;
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
     }
-
-    footer {
-      padding: 20px;
-      background-color: #111;
-      font-size: 14px;
+    .panel{
+      background: rgba(18,26,47,.78);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
     }
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .btn{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .btn.primary{background:var(--accent);color:#071018;border-color:transparent}
+    .btn.alt{background:rgba(255,255,255,.06)}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--muted);
+      font-size:13px;
+      margin:10px 8px 0 0;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin:18px 0 6px;
+    }
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+    .card{
+      background: rgba(15,23,42,.70);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted);line-height:1.5}
+    section{padding:26px 0}
+    h2{margin:0 0 10px;font-size:22px}
+    .muted{color:var(--muted);line-height:1.6}
+    .twoCol{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width:860px){.twoCol{grid-template-columns:1fr}}
+    label{display:block;font-weight:700;margin:10px 0 6px}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.22);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .formNote{font-size:13px;color:var(--muted);margin-top:10px}
+    .submit{
+      width:100%;
+      margin-top:12px;
+      padding:13px 14px;
+      border-radius:12px;
+      border:0;
+      background:var(--accent2);
+      color:#071018;
+      font-weight:900;
+      font-size:16px;
+      cursor:pointer;
+    }
+    footer{
+      padding:22px 0 90px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:rgba(255,255,255,.70);
+      font-size:13px;
+    }
+    /* Sticky mobile bar */
+    .sticky{
+      position:fixed;
+      left:0;right:0;bottom:0;
+      background:rgba(10,15,28,.92);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(10px);
+      padding:10px 12px;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      z-index:9999;
+    }
+    .sticky a{
+      flex:1;
+      max-width:520px;
+      text-align:center;
+      padding:12px 14px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+    }
+    .sticky .call{background:var(--accent);color:#071018}
+    .sticky .quote{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
   </style>
 </head>
-
 <body>
 
 <header>
-  <h1>Securevolt Solutions</h1>
-  <p>Security • IT • Network • Protection</p>
-  <a href="tel:+12166320022" class="btn">Call Now</a>
-  <a href="mailto:dispatch@securevoltsolutions.com" class="btn">Get a Quote</a>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Securevolt Solutions</h1>
+          <div class="tag">Security • IT • Network • Protection</div>
+          <div class="pill">Fast response</div>
+          <div class="pill">Professional installs</div>
+          <div class="pill">Home & Business</div>
+        </div>
+      </div>
+      <div class="ctaRow">
+        <a class="btn primary" href="tel:+12166320022">Call: (216) 632-0022</a>
+        <a class="btn alt" href="#quote">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="panel">
+        <h2>Protect what matters — with a clean, professional setup.</h2>
+        <p class="muted">
+          We help homes and small businesses stay secure with camera installs, access control, network setup,
+          and practical cybersecurity. No fluff — just real work done right.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Security Cameras</h3>
+            <p>Install, upgrade, troubleshoot. Clean wiring, sharp angles, reliable recording.</p>
+          </div>
+          <div class="card">
+            <h3>Access Control</h3>
+            <p>Keypad, fob, and controlled entry solutions for commercial properties.</p>
+          </div>
+          <div class="card">
+            <h3>IT & Network</h3>
+            <p>Wi-Fi optimization, business networks, device setup, and security hardening.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="quote">
+        <h2>Request a Quote</h2>
+        <p class="muted">Fill this out — we’ll reach out fast.</p>
+
+        <!-- Formspree: replace YOUR_FORM_ID after we create it -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="twoCol">
+            <div>
+              <label>Your Name</label>
+              <input name="name" placeholder="Full name" required />
+            </div>
+            <div>
+              <label>Phone</label>
+              <input name="phone" placeholder="(216) 632-0022" required />
+            </div>
+          </div>
+
+          <label>Email</label>
+          <input type="email" name="email" placeholder="you@example.com" required />
+
+          <label>ZIP / Service Area</label>
+          <input name="zip" placeholder="ZIP code" />
+
+          <label>What do you need?</label>
+          <select name="service" required>
+            <option value="">Select one</option>
+            <option>Security Cameras</option>
+            <option>Access Control</option>
+            <option>Alarm / Monitoring</option>
+            <option>Wi-Fi / Network Setup</option>
+            <option>IT Support</option>
+            <option>Cybersecurity Setup</option>
+          </select>
+
+          <label>Details</label>
+          <textarea name="details" placeholder="Tell us what’s going on (how many cameras, home or business, etc.)"></textarea>
+
+          <input type="hidden" name="_subject" value="New Securevolt Quote Request" />
+          <button class="submit" type="submit">Send Request</button>
+
+          <div class="formNote">
+            Prefer text? Call or text <b>(216) 632-0022</b>. Email: <b>dispatch@securevoltsolutions.com</b>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </header>
 
-<section class="services">
-  <h2>Our Services</h2>
-
-  <div class="service-box">
-    <h3>Security Cameras</h3>
-    <p>Professional installation and upgrades for homes and businesses.</p>
+<section>
+  <div class="wrap">
+    <div class="twoCol">
+      <div class="card">
+        <h2>Service Areas</h2>
+        <p class="muted">Cleveland + surrounding areas. If you're nearby, send the request — we’ll confirm availability.</p>
+      </div>
+      <div class="card">
+        <h2>Contact</h2>
+        <p class="muted">
+          Phone: <a href="tel:+12166320022">(216) 632-0022</a><br/>
+          Email: <a href="mailto:dispatch@securevoltsolutions.com">dispatch@securevoltsolutions.com</a>
+        </p>
+      </div>
+    </div>
   </div>
-
-  <div class="service-box">
-    <h3>Access Control</h3>
-    <p>Secure entry systems for commercial properties.</p>
-  </div>
-
-  <div class="service-box">
-    <h3>IT & Network Setup</h3>
-    <p>Wi-Fi optimization, business networks, and cybersecurity solutions.</p>
-  </div>
-
 </section>
 
 <footer>
-  © 2026 Securevolt Solutions | dispatch@securevoltsolutions.com
+  <div class="wrap">
+    © 2026 Securevolt Solutions. All rights reserved.
+  </div>
 </footer>
+
+<div class="sticky">
+  <a class="call" href="tel:+12166320022">Call Now</a>
+  <a class="quote" href="#quote">Request Quote</a>
+</div>
 
 </body>
 </html>
