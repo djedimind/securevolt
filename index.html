@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Securevolt Solutions</title>
-  <meta name="description" content="Securevolt Solutions - Security, IT, Network, and Protection. Fast response. Professional installs." />
+  <title>Securevolt Solutions | Cleveland Security & IT</title>
+  <meta name="description" content="Securevolt Solutions provides security camera installs, access control, and IT/network setup in Cleveland and surrounding areas." />
+
   <style>
     :root{
       --bg:#0a0f1c;
@@ -14,23 +15,24 @@
       --muted:rgba(255,255,255,.78);
       --accent:#00bcd4;
       --accent2:#22c55e;
-      --danger:#ef4444;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius:16px;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 12px 34px rgba(0,0,0,.35);
+      --radius:18px;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 20% 0%, #12203a, var(--bg));
+      background: radial-gradient(1100px 800px at 20% 0%, #12203a, var(--bg));
       color:var(--text);
     }
     a{color:inherit}
     .wrap{max-width:980px;margin:0 auto;padding:0 18px}
     header{
-      padding:56px 0 24px;
-      background: linear-gradient(135deg, rgba(0,188,212,.18), rgba(34,197,94,.10), rgba(44,83,100,.15));
-      border-bottom:1px solid rgba(255,255,255,.08);
+      padding:56px 0 18px;
+      background: linear-gradient(135deg, rgba(0,188,212,.18), rgba(34,197,94,.12), rgba(44,83,100,.15));
+      border-bottom:1px solid var(--border);
     }
     .top{
       display:flex;
@@ -45,39 +47,26 @@
       align-items:center;
     }
     .logo{
-      width:44px;height:44px;border-radius:12px;
+      width:46px;height:46px;border-radius:14px;
       background: linear-gradient(135deg, var(--accent), #2c5364);
       box-shadow: var(--shadow);
+      border:1px solid rgba(255,255,255,.18);
     }
     h1{margin:0;font-size:34px;letter-spacing:.2px}
     .tag{margin:8px 0 0;color:var(--muted);font-size:16px;line-height:1.4}
-    .hero{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-    }
-    @media (max-width:860px){
-      .hero{grid-template-columns:1fr}
-    }
-    .panel{
-      background: rgba(18,26,47,.78);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:18px;
-    }
-    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap}
     .btn{
       display:inline-block;
       padding:12px 16px;
-      border-radius:12px;
+      border-radius:14px;
       text-decoration:none;
-      font-weight:700;
+      font-weight:800;
       border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
     }
     .btn.primary{background:var(--accent);color:#071018;border-color:transparent}
-    .btn.alt{background:rgba(255,255,255,.06)}
+    .btn.ghost{background:transparent}
+    .pillRow{margin-top:10px}
     .pill{
       display:inline-flex;gap:8px;align-items:center;
       padding:8px 12px;border-radius:999px;
@@ -87,13 +76,34 @@
       font-size:13px;
       margin:10px 8px 0 0;
     }
+
+    .hero{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      padding-bottom:10px;
+    }
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} }
+
+    .panel{
+      background: rgba(18,26,47,.78);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    h2{margin:0 0 10px;font-size:22px}
+    .muted{color:var(--muted);line-height:1.6}
+
     .grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:14px;
-      margin:18px 0 6px;
+      margin-top:14px;
     }
-    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
+
     .card{
       background: rgba(15,23,42,.70);
       border:1px solid rgba(255,255,255,.08);
@@ -102,32 +112,31 @@
     }
     .card h3{margin:0 0 8px;font-size:18px}
     .card p{margin:0;color:var(--muted);line-height:1.5}
-    section{padding:26px 0}
-    h2{margin:0 0 10px;font-size:22px}
-    .muted{color:var(--muted);line-height:1.6}
+
     .twoCol{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:14px;
+      gap:12px;
     }
-    @media (max-width:860px){.twoCol{grid-template-columns:1fr}}
-    label{display:block;font-weight:700;margin:10px 0 6px}
+    @media (max-width:860px){ .twoCol{grid-template-columns:1fr} }
+
+    label{display:block;font-weight:800;margin:10px 0 6px}
     input, select, textarea{
       width:100%;
       padding:12px 12px;
-      border-radius:12px;
+      border-radius:14px;
       border:1px solid rgba(255,255,255,.12);
       background:rgba(0,0,0,.22);
       color:var(--text);
       outline:none;
     }
     textarea{min-height:110px;resize:vertical}
-    .formNote{font-size:13px;color:var(--muted);margin-top:10px}
+
     .submit{
       width:100%;
       margin-top:12px;
       padding:13px 14px;
-      border-radius:12px;
+      border-radius:14px;
       border:0;
       background:var(--accent2);
       color:#071018;
@@ -135,12 +144,26 @@
       font-size:16px;
       cursor:pointer;
     }
+
+    .success{
+      display:none;
+      margin:10px 0 0;
+      padding:10px 12px;
+      border-radius:14px;
+      background:rgba(34,197,94,.15);
+      border:1px solid rgba(34,197,94,.35);
+      color:rgba(255,255,255,.92);
+      font-weight:800;
+    }
+
+    section{padding:20px 0 10px}
     footer{
       padding:22px 0 90px;
-      border-top:1px solid rgba(255,255,255,.08);
+      border-top:1px solid var(--border);
       color:rgba(255,255,255,.70);
       font-size:13px;
     }
+
     /* Sticky mobile bar */
     .sticky{
       position:fixed;
@@ -159,7 +182,7 @@
       max-width:520px;
       text-align:center;
       padding:12px 14px;
-      border-radius:14px;
+      border-radius:16px;
       text-decoration:none;
       font-weight:900;
     }
@@ -167,8 +190,8 @@
     .sticky .quote{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
   </style>
 </head>
-<body>
 
+<body>
 <header>
   <div class="wrap">
     <div class="top">
@@ -176,15 +199,18 @@
         <div class="logo"></div>
         <div>
           <h1>Securevolt Solutions</h1>
-          <div class="tag">Security • IT • Network • Protection</div>
-          <div class="pill">Fast response</div>
-          <div class="pill">Professional installs</div>
-          <div class="pill">Home & Business</div>
+          <div class="tag">Cleveland Security Camera & IT Services — Fast, Professional Installation</div>
+          <div class="pillRow">
+            <span class="pill">Same-week availability</span>
+            <span class="pill">Home & Business</span>
+            <span class="pill">Clean installs</span>
+          </div>
         </div>
       </div>
+
       <div class="ctaRow">
-        <a class="btn primary" href="tel:+12166320022">Call: (216) 632-0022</a>
-        <a class="btn alt" href="#quote">Request a Quote</a>
+        <a class="btn primary" href="tel:+12166320022">Call (216) 632-0022</a>
+        <a class="btn ghost" href="#quote">Get a Quote</a>
       </div>
     </div>
 
@@ -192,8 +218,8 @@
       <div class="panel">
         <h2>Protect what matters — with a clean, professional setup.</h2>
         <p class="muted">
-          We help homes and small businesses stay secure with camera installs, access control, network setup,
-          and practical cybersecurity. No fluff — just real work done right.
+          Cameras, access control, and secure networks for Cleveland homes and small businesses.
+          No upselling — just the right solution installed the right way.
         </p>
 
         <div class="grid">
@@ -216,8 +242,9 @@
         <h2>Request a Quote</h2>
         <p class="muted">Fill this out — we’ll reach out fast.</p>
 
-        <!-- Formspree: replace YOUR_FORM_ID after we create it -->
-        <form action="https://formspree.io/f/mlgwkrke method"="POST">
+        <div class="success" id="successBox">✅ Request sent! We’ll contact you shortly.</div>
+
+        <form action="https://formspree.io/f/mlgwkrke" method="POST" accept-charset="UTF-8">
           <div class="twoCol">
             <div>
               <label>Your Name</label>
@@ -230,7 +257,7 @@
           </div>
 
           <label>Email</label>
-          <input type="email" name="email" placeholder="dispatch@securevoltsolutions.com" required />
+          <input type="email" name="email" placeholder="you@example.com" required />
 
           <label>ZIP / Service Area</label>
           <input name="zip" placeholder="ZIP code" />
@@ -249,12 +276,15 @@
           <label>Details</label>
           <textarea name="details" placeholder="Tell us what’s going on (how many cameras, home or business, etc.)"></textarea>
 
+          <!-- Helpful metadata -->
           <input type="hidden" name="_subject" value="New Securevolt Quote Request" />
+          <input type="hidden" name="_redirect" value="https://djedimind.github.io/securevolt/?sent=1#quote" />
+
           <button class="submit" type="submit">Send Request</button>
 
-          <div class="formNote">
+          <p class="muted" style="margin:10px 0 0;font-size:13px;">
             Prefer text? Call or text <b>(216) 632-0022</b>. Email: <b>dispatch@securevoltsolutions.com</b>
-          </div>
+          </p>
         </form>
       </div>
     </div>
@@ -265,8 +295,11 @@
   <div class="wrap">
     <div class="twoCol">
       <div class="card">
-        <h2>Service Areas</h2>
-        <p class="muted">Cleveland + surrounding areas. If you're nearby, send the request — we’ll confirm availability.</p>
+        <h2>Why Choose Securevolt?</h2>
+        <p class="muted">✔ Clean professional wiring</p>
+        <p class="muted">✔ Fast response & clear communication</p>
+        <p class="muted">✔ No upselling — only what you need</p>
+        <p class="muted">✔ Local Cleveland service</p>
       </div>
       <div class="card">
         <h2>Contact</h2>
@@ -290,5 +323,16 @@
   <a class="quote" href="#quote">Request Quote</a>
 </div>
 
+<script>
+  // Show success message if redirected back with ?sent=1
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("sent") === "1") {
+      const box = document.getElementById("successBox");
+      if (box) box.style.display = "block";
+    }
+  })();
+</script>
+
 </body>
-</html> 
+</html>
